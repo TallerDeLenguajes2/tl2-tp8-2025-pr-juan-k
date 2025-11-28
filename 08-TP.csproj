@@ -7,4 +7,8 @@
     <RootNamespace>_08_TP</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SQLite" Version="10.0.0" />
+  </ItemGroup>
+
 </Project>

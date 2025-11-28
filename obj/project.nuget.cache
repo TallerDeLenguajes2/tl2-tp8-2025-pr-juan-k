@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "s0t0v3xl9WK+SAyeAGmKCgYnMEHHXznqyKaACid5gANti533fv6lOQXtmVLnY4nW/KwiFOeQknn/m+v/cKrTgQ==",
+  "dgSpecHash": "Old2XZkMSJEcSpmvhUrSV4zGsPS/LJs5OQWv+8GgwHDSaMzKYIvZ1QLBZf/g6S7Tm99E4IMyhXHZ67P24HlJNA==",
   "success": true,
   "projectFilePath": "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/08-TP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/diego/.nuget/packages/microsoft.data.sqlite/10.0.0/microsoft.data.sqlite.10.0.0.nupkg.sha512",
+    "/home/diego/.nuget/packages/microsoft.data.sqlite.core/10.0.0/microsoft.data.sqlite.core.10.0.0.nupkg.sha512",
+    "/home/diego/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.11/sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/diego/.nuget/packages/sqlitepclraw.core/2.1.11/sqlitepclraw.core.2.1.11.nupkg.sha512",
+    "/home/diego/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.11/sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/diego/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.11/sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/diego/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
