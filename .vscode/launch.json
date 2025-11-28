@@ -1,0 +1,24 @@
+// .vscode/launch.json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build", // <--- Esto llama a la tarea 'build' de tasks.json
+            "program": "${workspaceFolder}/bin/Debug/net8.0/08-TP.dll", // <-- ¡CAMBIA ESTO! (net8.0 y TuProyecto.dll)
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s" // Esto abrirá la URL principal. Puedes usar "%s/swagger" si lo necesitas.
+            }
+        }
+    ]
+}

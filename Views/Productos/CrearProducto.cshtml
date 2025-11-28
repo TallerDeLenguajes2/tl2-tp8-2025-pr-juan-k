@@ -1,0 +1,24 @@
+@model Productos
+
+@{
+    ViewData["title"] = "Crear Productos";
+}
+
+<section class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+    <article class="border rounded p-5">
+        <form method="post" asp-controller="Productos" asp-action="CrearProducto">
+            <section class="from-group p-2">
+                <label class="from-label" asp-for="Descripcion">Descripcion</label>
+                <input class="from-control-sm" type="text" asp-for="Descripcion">
+            </section>
+            <section class="from-group p-2">
+                <label class="from-label" asp-for="Precio" >Precio</label>
+                <input class="from-control-sm" type="number" asp-for="Precio">
+            </section>
+            <section class="form-group p-2" >
+                <input class="btn btn-primary" type="submit" value="Crear"  >
+                <a asp-controller="Productos" asp-action="Index" class="btn btn-danger" >Volver</a>
+            </section>
+        </form>
+    </article>
+</section>
