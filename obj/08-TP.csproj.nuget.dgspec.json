@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/diego/Escritorio/2-trimestre-2Parcial/08-TP/08-TP.csproj": {}
+    "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/08-TP.csproj": {}
   },
   "projects": {
-    "/home/diego/Escritorio/2-trimestre-2Parcial/08-TP/08-TP.csproj": {
+    "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/08-TP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/diego/Escritorio/2-trimestre-2Parcial/08-TP/08-TP.csproj",
+        "projectUniqueName": "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/08-TP.csproj",
         "projectName": "08-TP",
-        "projectPath": "/home/diego/Escritorio/2-trimestre-2Parcial/08-TP/08-TP.csproj",
+        "projectPath": "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/08-TP.csproj",
         "packagesPath": "/home/diego/.nuget/packages/",
-        "outputPath": "/home/diego/Escritorio/2-trimestre-2Parcial/08-TP/obj/",
+        "outputPath": "/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/diego/.nuget/NuGet/NuGet.Config"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
