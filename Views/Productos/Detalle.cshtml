@@ -1,0 +1,25 @@
+@model Productos
+
+@{
+    ViewData["title"] = "Detalles del producto";
+}
+<h4>@ViewData["title"] </h4>
+
+
+<section class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+    <article class="border rounded p-5">
+        <section>
+            <p>Id Producto:@Model.idProducto</p>
+        </section>
+        <section>
+            <p>Producto:@Model.Descripcion</p>
+        </section>
+        <section>
+            <p>Precio:@Model.Precio</p>
+        </section>
+        <section>
+            <a  class="btn btn-primary" asp-controller="Productos" asp-action="Index" >Volver</a>
+    </section>
+    </article>
+    
+</sectio>

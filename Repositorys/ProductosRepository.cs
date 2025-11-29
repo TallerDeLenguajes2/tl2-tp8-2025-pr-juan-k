@@ -35,7 +35,7 @@ public class ProductosRepository : IProductosRepository
             {
                 commandDB.Parameters.Add(new SqliteParameter("idP",productoUpda.idProducto));
                 commandDB.Parameters.Add(new SqliteParameter("descripcion",productoUpda.Descripcion));
-                commandDB.Parameters.Add(new SqliteParameter("Precio",productoUpda.Precio));
+                commandDB.Parameters.Add(new SqliteParameter("precio",productoUpda.Precio));
                 encontrado = commandDB.ExecuteNonQuery();
             }
             connectionDB.Close();
@@ -75,7 +75,7 @@ public class ProductosRepository : IProductosRepository
     public Productos Buscar(int idP)
     {
         Productos productoEncontrado = null;
-        string sentenciaSQl = "SELECT * FROM Poductos WHERE idProducto = @idP";
+        string sentenciaSQl = "SELECT * FROM Productos WHERE idProducto = @idP";
         using (SqliteConnection connectionDB = new SqliteConnection(urlDB))
         {
             connectionDB.Open();

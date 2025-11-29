@@ -1,0 +1,18 @@
+@model Productos
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h4>@ViewData["Title"]</h4>
+
+<section class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+    <article class="border rounded p-5">
+        <p>¿Seguro que desea elinar?</p>
+        <p>Producto: @Model.Descripcion</p>
+        <p>Precio: @Model.Precio</p>
+
+        <a class="btn btn-primary" asp-controller="Productos" asp-action="Index" >Volver</a>
+        <a class="btn btn-warning" asp-controller="Productos" asp-route-idP="@Model.idProducto" asp-action="EliminarConfirm">Eliminar</a>
+    </article>
+</section>
+

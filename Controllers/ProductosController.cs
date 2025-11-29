@@ -24,6 +24,38 @@ public class ProductosController :Controller
         _productoRepository.AddProducto(productoAdd);
         return RedirectToAction(nameof(Index));
     }
+    [HttpGet]
+    public IActionResult Detalle(int idP)
+    {
+        var productos = _productoRepository.Buscar(idP);
+    
+        return View(productos);
+    }
+    [HttpGet]
+    public IActionResult Modificar(int idP)
+    {
+        var productSelecionado = _productoRepository.Buscar(idP);
+        return View(productSelecionado);        
+    }
+    [HttpPost]
+    public IActionResult Modificar(Productos producModif)
+    {
+        _productoRepository.Update(producModif);
+        return RedirectToAction(nameof(Index));
+    }
+    [HttpGet]
+    public IActionResult Eliminar(int idP)
+    {
+        var encontrado = _productoRepository.Buscar(idP);
+        return View(encontrado);
+    }
+    [HttpGet]
+    public IActionResult EliminarConfirm(int idP)
+    {
+        _productoRepository.DeleteProducto(idP);
+        return RedirectToAction("Index");        
+    }
+
     
 
 }

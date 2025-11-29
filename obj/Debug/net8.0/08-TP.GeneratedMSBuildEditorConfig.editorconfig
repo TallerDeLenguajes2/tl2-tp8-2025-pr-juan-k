@@ -30,8 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0NyZWFyUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Productos/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Productos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0VsaW1pbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Productos/Modificar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdG9zL01vZGlmaWNhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Shared/Error.cshtml]
