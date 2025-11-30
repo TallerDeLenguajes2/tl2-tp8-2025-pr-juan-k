@@ -19,9 +19,18 @@ public class ProductosController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult CrearProducto(Productos productoAdd)
+    public IActionResult CrearProducto(ProductosViewModels productoAdd)
     {
-        _productoRepository.AddProducto(productoAdd);
+        if (!ModelState.IsValid)
+        {
+            return View(productoAdd);
+        }
+        Productos creado = new Productos{
+            Descripcion = productoAdd.Descripcion,
+            Precio = productoAdd.Precio
+
+        };
+        _productoRepository.AddProducto(creado);
         return RedirectToAction(nameof(Index));
     }
     [HttpGet]
@@ -35,12 +44,22 @@ public class ProductosController : Controller
     public IActionResult Modificar(int idP)
     {
         var productSelecionado = _productoRepository.Buscar(idP);
-        return View(productSelecionado);        
+        ProductosViewModels edit = new ProductosViewModels(productSelecionado);
+
+        if (productSelecionado == null)
+        {
+            return NotFound();
+        }
+
+        return View(edit);        
     }
     [HttpPost]
-    public IActionResult Modificar(Productos producModif)
+    public IActionResult Modificar(ProductosViewModels producModif)
     {
-        _productoRepository.Update(producModif);
+        Productos modif = new Productos(producModif.idProducto,producModif.Descripcion,producModif.Precio);
+
+        
+        _productoRepository.Update(modif);
         return RedirectToAction(nameof(Index));
     }
     [HttpGet]

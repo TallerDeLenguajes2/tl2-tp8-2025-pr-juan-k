@@ -1,10 +1,11 @@
-@model Presupuestos // ❗ Usa el ViewModel
+@using MVC.ViewModels
+@model PresupuestosViewModel
 
 @{
     ViewData["Title"] = "Modificar Presupuesto";
 }
 
-<h2 class="mt-4">Modificar Presupuesto Nro. @Model.IdPresupuesto</h2>
+<h2 class="mt-4">Modificar Presupuesto Nro. @Model.idPresupuesto</h2>
 <hr />
 
 <div class="row">
@@ -12,7 +13,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
-            <input type="hidden" asp-for="IdPresupuesto" /> 
+            <input type="hidden" asp-for="idPresupuesto" /> 
 
             <div class="form-group">
                 <label asp-for="NombreDestinatario" class="control-label"></label>
@@ -35,7 +36,7 @@
 </div>
 
 <div class="mt-3">
-    <a asp-action="Index">Volver a la lista</a>
+    <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

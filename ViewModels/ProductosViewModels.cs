@@ -15,4 +15,16 @@ public class ProductosViewModels
     [Display(Name = "Precio del producto")]
     [Range(0.01,float.MaxValue,ErrorMessage = "El precio debe ser mayor a 0.01")]
     public float Precio {get;set;}
+
+    public ProductosViewModels()
+    {
+        
+    }
+    public ProductosViewModels(Productos producto)
+    {
+        Descripcion = producto.Descripcion;
+        idProducto = producto.idProducto;
+        Precio = producto.Precio;
+    }
+    
 }

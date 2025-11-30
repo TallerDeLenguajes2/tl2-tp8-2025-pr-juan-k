@@ -1,7 +1,7 @@
 public class Presupuestos
 {
     private const decimal IVA = 0.21m; 
-    public int IdPresupuesto {get;set;}
+    public int idPresupuesto {get;set;}
     public string?  NombreDestinatario{get;set;}
 
     public DateTime FechaCreacion {get;set;}

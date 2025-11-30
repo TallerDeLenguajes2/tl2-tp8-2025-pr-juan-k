@@ -1,4 +1,5 @@
-@model Productos
+@model ProductosViewModels
+
 @{
     ViewData["titulo"] = "Editar producto";
 }
@@ -11,10 +12,12 @@
             <section class="from-group p-2">
                 <label class="from-label" asp-for="Descripcion"  >Descripcion</label>
                 <input class="from-control-sm" type="text" asp-for="Descripcion" value="@Model.Descripcion"/>
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
             </section>
             <section class="from-group p-2">
                 <label class="from-label" asp-for="Precio" >Precio</label>
                 <input class="from-control-sm" type="text" asp-for="Precio" value="@Model.Precio" />
+            <span asp-validation-for="Precio" class="text-danger"></span>
             </section>
             <section class="form-group p-2">
                 <input class="btn btn-primary" type="submit" value="Modificar">
@@ -23,4 +26,6 @@
         </form>
     </article>
 </section>
-
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

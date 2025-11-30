@@ -11,7 +11,7 @@
 <div>
     <dl class="row">
         <dt class="col-sm-3">ID</dt>
-        <dd class="col-sm-9">@Html.DisplayFor(model => model.IdPresupuesto)</dd>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.idPresupuesto)</dd>
         
         <dt class="col-sm-3">@Html.DisplayNameFor(model => model.NombreDestinatario)</dt>
         <dd class="col-sm-9">@Html.DisplayFor(model => model.NombreDestinatario)</dd>
@@ -21,7 +21,7 @@
     </dl>
     
     <form asp-controller="Presupuestos" asp-action="Delete">
-        <input type="hidden" asp-for="IdPresupuesto" />
+        <input type="hidden" asp-for="idPresupuesto" />
         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
         <a class="btn btn-primary" asp-action="Index">Volver a la lista</a>
     </form>

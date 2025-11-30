@@ -48,7 +48,7 @@ public class PresupuestosRepository :IPresupuestosRepository
                     {
                         var presupuesto = new Presupuestos
                         {
-                            IdPresupuesto = Convert.ToInt32(reader["idPresupuesto"]),
+                            idPresupuesto = Convert.ToInt32(reader["idPresupuesto"]),
                             NombreDestinatario = reader.GetString(1),
                             FechaCreacion = reader.GetDateTime(2),
                             // Nota: Los detalles (Detalle) NO se cargan en GetAll() por eficiencia.
@@ -81,7 +81,7 @@ public class PresupuestosRepository :IPresupuestosRepository
             {
                 presupuesto = new Presupuestos
                 {
-                    IdPresupuesto = lector.GetInt32(0),
+                    idPresupuesto = lector.GetInt32(0),
                     NombreDestinatario = lector.GetString(1),
                     FechaCreacion = lector.GetDateTime(2)
                 };
@@ -102,7 +102,7 @@ public class PresupuestosRepository :IPresupuestosRepository
             using var comando = new SqliteCommand(sql, conexion);
             comando.Parameters.AddWithValue("@NombreDestinatario", presupuesto.NombreDestinatario);
             comando.Parameters.AddWithValue("@FechaCreacion", presupuesto.FechaCreacion);
-            comando.Parameters.AddWithValue("@Id", presupuesto.IdPresupuesto);
+            comando.Parameters.AddWithValue("@Id", presupuesto.idPresupuesto);
 
             comando.ExecuteNonQuery();
         }
@@ -167,7 +167,7 @@ public class PresupuestosRepository :IPresupuestosRepository
 
      public void AddDetalle(int idPresupuesto, int idProducto, int cantidad)
         {
-            const string sql = "INSERT INTO PresupuestoDetalle (IdPresupuesto, IdProducto, Cantidad) VALUES (@IdPresupuesto, @IdProducto, @Cantidad)";
+            const string sql = "INSERT INTO PresupuestosDetalle (IdPresupuesto, IdProducto, Cantidad) VALUES (@IdPresupuesto, @IdProducto, @Cantidad)";
 
             using var conexion = new SqliteConnection(urlDB);
             conexion.Open();
