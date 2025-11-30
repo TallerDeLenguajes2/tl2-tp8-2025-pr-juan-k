@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-public class ProductosController :Controller
+public class ProductosController : Controller
 {
     private  IProductosRepository _productoRepository;
     public ProductosController(IProductosRepository produc)
