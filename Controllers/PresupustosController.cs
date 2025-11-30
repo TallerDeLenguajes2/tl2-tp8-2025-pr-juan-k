@@ -6,20 +6,28 @@ public class PresupuestosController : Controller
 {
     private readonly IPresupuestosRepository _presupuestoRepo;
     private readonly IProductosRepository _produtosRepo;
-    public PresupuestosController(IPresupuestosRepository presu,IProductosRepository produc)
+    private readonly IAuthenticationService _authentication;
+    public PresupuestosController(IAuthenticationService auten,IPresupuestosRepository presu,IProductosRepository produc)
     {
         _presupuestoRepo = presu;
         _produtosRepo = produc;
+        _authentication = auten;
     }
     [HttpGet]
     public IActionResult Index()
     {
+        
         var presupuestos = _presupuestoRepo.GetPresupuestos();
         return View(presupuestos);
     }
     [HttpGet]
     public IActionResult Create()
     {
+        var acceso = _authentication.HasAccessLevel("Administrador");
+        if (!acceso)
+        {
+            return RedirectToAction("AccesoDenegado","Home");
+        }
         return View();  
     }
     [HttpPost]
@@ -41,6 +49,12 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult Edit(int idP)
     {
+        var acceso = _authentication.HasAccessLevel("Administrador");
+        if (!acceso)
+        {
+            return RedirectToAction("AccesoDenegado","Home");
+        }
+
         var presupuestoEdit = _presupuestoRepo.GetById(idP);
         PresupuestosViewModel PresupuestoVM = new PresupuestosViewModel(presupuestoEdit);
         return View(PresupuestoVM);
@@ -64,6 +78,11 @@ public class PresupuestosController : Controller
     [HttpGet]
     public IActionResult Eliminar(int idP)
     {
+        var acceso = _authentication.HasAccessLevel("Administrador");
+        if (!acceso)
+        {
+            return RedirectToAction("AccesoDenegado","Home");
+        }
         var presupuestoEliminar = _presupuestoRepo.GetById(idP);
         return View(presupuestoEliminar);
     }

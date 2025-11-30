@@ -18,12 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Home/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BY2Nlc29EZW5lZ2Fkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/diego/Escritorio/2-trimestre-2Parcial/10-TP/tl2-tp8-2025-pr-juan-k/Views/Presupuestos/AgregarProducto.cshtml]

@@ -1,4 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    var isAuthenticated = false;
+    var username = string.Empty;
+    var rolAdmin = false;
+    if (HttpContextAccessor.HttpContext.Session.GetString("IsAuthenticated") == "true")
+    {
+        isAuthenticated = true;
+    }
+    if(HttpContextAccessor.HttpContext.Session.GetString("Rol") == "Administrador")
+    {
+        rolAdmin = true;
+    }
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -18,21 +35,34 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    @if(isAuthenticated)
+                    {
+                        <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
-                        </li>
-                        </li>
+                        
+                            @if(rolAdmin)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                                </li>
+                        
+                            }
+
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Presupuestos" asp-action="Index">Presupuestos</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Presupuestos" asp-action="Index">Presupuestos</a>
+                            </li>
+                         
+                         <li class="nav-item">
+                            <a class="btn btn-primary" class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Logout">Salir</a>
                         </li>
                     </ul>
+                    }
+                    
                 </div>
             </div>
         </nav>

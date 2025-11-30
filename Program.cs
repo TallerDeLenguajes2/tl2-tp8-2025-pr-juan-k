@@ -1,25 +1,28 @@
+ 
+using MVC.Services; // ❗ Nuevo using
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHttpContextAccessor();
+// Habilitar servicios de sesiones
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
-    options.Cookie.HttpOnly = true;
-    options.Cookie.IsEssential = true;
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Tiempo de expiración de la sesión
+    options.Cookie.HttpOnly = true; // Solo accesible desde HTTP, no JavaScript
+    options.Cookie.IsEssential = true; // Necesario incluso si el usuario no acepta cookies
 });
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUserRepository, UsuarioRepository>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IProductosRepository, ProductosRepository>();
 builder.Services.AddScoped<IPresupuestosRepository, PresupuestosRepository>();
-
-
-builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-//nuevo
+// Usar sesiones
 app.UseSession();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +42,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();
